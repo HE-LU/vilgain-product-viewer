@@ -1,5 +1,13 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:bloc_effects/bloc_effects.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:product_viewer/features/dashboard/dashboard_bloc.dart';
+import 'package:product_viewer/features/dashboard/dashboard_page_content.dart';
+
+/// Page wrapper with Scaffold and AppBar.
+/// Ths page is scoping the [DashboardBloc] to the [DashboardPageContent].
+/// The [BlocListener] is listening to the [DashboardBloc] state changes. (Just a sample usage)
 
 @RoutePage()
 class DashboardPage extends StatelessWidget {
@@ -9,10 +17,24 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dashboard'),
+        title: Text('Product Viewer'),
       ),
-      body: Center(
-        child: Text('Dashboard Page'),
+      body: MultiBlocProvider(
+        // Title: Providers
+        providers: [
+          // Subtitle: [DashboardState] Bloc
+          BlocProvider<DashboardBloc>(create: (context) => DashboardBloc()),
+        ],
+        child: BlocEffectListener<DashboardBloc, DashboardEffect>(
+          // Title: Effect Listeners
+          listener: (context, effect) {
+            effect.map(onDataLoaded: (_) {
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Data loaded')));
+            });
+          },
+          // Title: Content
+          child: DashboardPageContent(),
+        ),
       ),
     );
   }

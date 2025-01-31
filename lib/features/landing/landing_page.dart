@@ -40,7 +40,7 @@ class _LandingPageState extends State<LandingPage> {
       FlutterNativeSplash.remove();
 
       Flogger.d('[LandingPage] Redirecting to Dashboard');
-      context.replaceRoute(const DashboardRoute());
+      context.replaceRoute(DashboardRoute());
     }
   }
 }

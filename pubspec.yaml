@@ -13,7 +13,11 @@ dependencies:
     sdk: flutter
 
   # State management
-  flutter_bloc: 9.0.0
+  flutter_bloc: 9.0.0                         # https://pub.dev/packages/flutter_bloc
+  bloc_effects: 2.0.0                         # https://pub.dev/packages/bloc_effects
+
+  # Dependency Injection
+  get_it: 8.0.3                               # https://pub.dev/packages/get_it
 
   # Network
   dio: 5.7.0                                  # https://pub.dev/packages/dio
