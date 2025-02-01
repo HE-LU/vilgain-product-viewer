@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:product_viewer/component/custom_network_image.dart';
-import 'package:product_viewer/data/model/product_model.dart';
+import 'package:product_viewer/common/component/custom_network_image.dart';
+import 'package:product_viewer/common/data/model/product_model.dart';
 
 /// Just a simple page to show product details.
 /// In ideal case, this page should be more complex.
@@ -43,16 +43,16 @@ class ProductDetailPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Subtitle: Rating in starts
-              Text("Product rating", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              Text('Product rating', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
               Row(
                 children: [
                   Icon(Icons.star, color: Colors.yellow),
                   Text(product.ratingRate.toString()),
                 ],
               ),
-              Text("Rating count: ${product.ratingCount}"),
+              Text('Rating count: ${product.ratingCount}'),
               const SizedBox(height: 16),
-              Text("Product description", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              Text('Product description', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
               Text(product.description),
               // TODO: Add more details. For example category.
             ],

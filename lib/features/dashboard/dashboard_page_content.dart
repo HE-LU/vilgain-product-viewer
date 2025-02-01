@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:product_viewer/app/navigation/app_router.dart';
-import 'package:product_viewer/component/custom_network_image.dart';
+import 'package:product_viewer/common/component/custom_network_image.dart';
 import 'package:product_viewer/features/dashboard/dashboard_bloc.dart';
 
 class DashboardPageContent extends StatelessWidget {
@@ -100,7 +100,7 @@ class _DataStateWidget extends StatelessWidget {
                           // Subtitle: Price text
                           Align(
                             alignment: Alignment.bottomRight,
-                            child: Text("${product.price} \$", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                            child: Text('${product.price} \$', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
                           ),
                         ],
                       ),

@@ -5,10 +5,6 @@
       "path": "./"
     },
     {
-      "name": "Assets",
-      "path": "./assets/"
-    },
-    {
       "name": "Flutter",
       "path": "./lib"
     },

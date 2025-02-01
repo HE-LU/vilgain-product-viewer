@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:product_viewer/data/model/product_model.dart';
+import 'package:product_viewer/common/data/model/product_model.dart';
 import 'package:product_viewer/features/dashboard/dashboard_page.dart';
 import 'package:product_viewer/features/landing/landing_page.dart';
 import 'package:product_viewer/features/product_detail/product_detail_page.dart';

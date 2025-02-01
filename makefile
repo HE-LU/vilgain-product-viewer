@@ -10,21 +10,14 @@ clean: # Clean everything in the project, download dependencies, generate code
 	@fvm flutter pub get
 	@make gen
 
-gen: # Generates localization and freezed files in project
-	@make gen_locale
+gen: # Generates freezed files in project
 	@fvm dart run build_runner build --delete-conflicting-outputs
-
-gen_locale: # Generates localization and freezed files in project
-	@fvm flutter gen-l10n --arb-dir "assets/localization" --template-arb-file "app_en.arb" --output-localization-file "app_localizations.gen.dart" --output-dir "lib/assets" --no-synthetic-package
 
 install: # Install any required packages
 	@dart pub global activate fvm
 	@fvm install 3.27.3
 	@fvm use 3.27.3
 	@fvm dart pub global activate patrol_cli
-
-integration_test: # Runs Patrol Integration tests 
-	@patrol test --target integration_test --flavor develop
 
 test: # Runs Flutter tests 
 	@fvm flutter test

@@ -27,13 +27,16 @@ dependencies:
   freezed_annotation: 2.4.4                   # https://pub.dev/packages/freezed_annotation
   json_annotation: 4.9.0                      # https://pub.dev/packages/json_annotation
 
+  # Navigation
+  auto_route: 9.3.0+1                         # https://pub.dev/packages/auto_route
+
+  # Local Storage
+  hive: 2.2.3                                 # https://pub.dev/packages/hive
+
   # Logging
   talker: 4.4.7                               # https://pub.dev/packages/talker
   talker_flutter: 4.4.7                       # https://pub.dev/packages/talker_flutter
   talker_dio_logger: 4.4.7                    # https://pub.dev/packages/talker_dio_logger
-
-  # Navigation
-  auto_route: 9.3.0+1                         # https://pub.dev/packages/auto_route
 
   # Resources
   extended_image: 9.1.0                       # https://pub.dev/packages/extended_image
@@ -45,6 +48,7 @@ dependencies:
 
   # Utility
   collection: 1.19.0                          # https://pub.dev/packages/collection
+  path_provider: 2.1.5                        # https://pub.dev/packages/path_provider
 
 
 dev_dependencies:
@@ -55,12 +59,17 @@ dev_dependencies:
   freezed: 2.5.7                              # https://pub.dev/packages/freezed
   json_serializable: 6.9.0                    # https://pub.dev/packages/json_serializable
 
+  # Navigation
+  auto_route_generator: 9.0.0                 # https://pub.dev/packages/auto_route_generator
+
+  # Local Storage
+  hive_generator: 2.0.1                       # https://pub.dev/packages/hive_generator
+
   # Lint
   custom_lint: 0.7.0                          # https://pub.dev/packages/custom_lint
   flutter_lints: 5.0.0                        # https://pub.dev/packages/flutter_lints
 
   # Utils
-  auto_route_generator: 9.0.0                 # https://pub.dev/packages/auto_route_generator
   build_runner: 2.4.14                        # https://pub.dev/packages/build_runner
 
 

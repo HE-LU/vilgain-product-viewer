@@ -2,6 +2,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:bloc_effects/bloc_effects.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:product_viewer/common/usecase/get_products_list_api_use_case.dart';
+import 'package:product_viewer/common/usecase/get_products_list_storage_use_case.dart';
+import 'package:product_viewer/core/di/get_it.dart';
 import 'package:product_viewer/features/dashboard/dashboard_bloc.dart';
 import 'package:product_viewer/features/dashboard/dashboard_page_content.dart';
 
@@ -23,7 +26,12 @@ class DashboardPage extends StatelessWidget {
         // Title: Providers
         providers: [
           // Subtitle: [DashboardState] Bloc
-          BlocProvider<DashboardBloc>(create: (context) => DashboardBloc()),
+          BlocProvider<DashboardBloc>(
+            create: (context) => DashboardBloc(
+              getProductsListApiUseCase: getIt<GetProductsListApiUseCase>(),
+              getProductsListStorageUseCaseFuture: getIt.getAsync<GetProductsListStorageUseCase>(),
+            ),
+          ),
         ],
         child: BlocEffectListener<DashboardBloc, DashboardEffect>(
           // Title: Effect Listeners
