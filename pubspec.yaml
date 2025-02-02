@@ -55,6 +55,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  # State management
+  bloc_test: 10.0.0                           # https://pub.dev/packages/bloc_test
+
   # Data Structures
   freezed: 2.5.7                              # https://pub.dev/packages/freezed
   json_serializable: 6.9.0                    # https://pub.dev/packages/json_serializable
@@ -71,6 +74,7 @@ dev_dependencies:
 
   # Utils
   build_runner: 2.4.14                        # https://pub.dev/packages/build_runner
+  mockito: 5.4.5                              # https://pub.dev/packages/mockito
 
 
 flutter:
