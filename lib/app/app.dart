@@ -1,17 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:product_viewer/app/navigation/app_router.dart';
-import 'package:product_viewer/core/di/get_it.dart';
 import 'package:product_viewer/core/flogger.dart';
 
 class App extends StatelessWidget {
   App({super.key});
 
-  static void startApp() {
-    runApp(App());
-  }
+  final AppRouter _appRouter = AppRouter();
 
-  final AppRouter _appRouter = getIt<AppRouter>();
+  static void startApp() => runApp(App());
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +24,7 @@ class App extends StatelessWidget {
   }
 }
 
-// TODO: Should be elsewhere and provided by DI
+// TODO: Should be elsewhere
 class LogsRouteObserver extends AutoRouterObserver {
   @override
   void didPush(Route route, Route? previousRoute) {
